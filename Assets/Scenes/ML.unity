@@ -224,7 +224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1776724240
 Transform:
   m_ObjectHideFlags: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toSpawn: {fileID: 8453588373055210122, guid: 981702eaede126f459f6d193562db72e, type: 3}
   gridHeight: 4
-  gridWidth: 3
+  gridWidth: 4
 --- !u!1001 &8453588373614886623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -325,7 +325,18 @@ PrefabInstance:
     - target: {fileID: 8453588373055210122, guid: 981702eaede126f459f6d193562db72e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453588373988962606, guid: 981702eaede126f459f6d193562db72e,
+        type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: ae8d625b563261b43844b9cf0cfc0faa,
+        type: 3}
+    - target: {fileID: 8453588373988962606, guid: 981702eaede126f459f6d193562db72e,
+        type: 3}
+      propertyPath: m_BehaviorType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 981702eaede126f459f6d193562db72e, type: 3}

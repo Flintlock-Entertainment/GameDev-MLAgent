@@ -27,23 +27,24 @@ public class EnemyAgent : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        if (GetComponent<TargetMover>().atTarget)
+        
+        float moveX = actions.ContinuousActions[0];
+        float moveY = actions.ContinuousActions[1];
+
+        var tempTarget = transform.position + new Vector3(moveX, moveY, moveZ)*moveSpeed*Time.deltaTime ;
+
+        var location = tilemap.WorldToCell(tempTarget);
+        var tile = tilemap.GetTile(location);
+        if (!allowedTiles.Contain(tile))
         {
-            float moveX = actions.ContinuousActions[0];
-            float moveY = actions.ContinuousActions[1];
-
-            var tempTarget = new Vector3(moveX, moveY, moveZ) + transform.GetComponentInParent<EnvController>().GetFloorPosition();
-
-            var location = tilemap.WorldToCell(tempTarget);
-            var tile = tilemap.GetTile(location);
-            if (!allowedTiles.Contain(tile))
-            {
-                SetReward(-1);
-            }
-            else
-            {
-                GetComponent<TargetMover>().SetTarget(tempTarget);
-            }
+            SetReward(-100);
+            EndEpisode();
+        }
+        else
+        {
+            transform.position =  tempTarget;
+            AddReward(20 - CalculateDistance());
+            
         }
     }
 
@@ -70,7 +71,7 @@ public class EnemyAgent : Agent
     {
         if (collision.gameObject.name == "Player")
         {
-            SetReward(1);
+            SetReward(100);
             EndEpisode();
         }
     }

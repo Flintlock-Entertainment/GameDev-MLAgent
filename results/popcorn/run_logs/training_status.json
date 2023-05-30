@@ -2,22 +2,31 @@
     "Enemy Behavior": {
         "checkpoints": [
             {
-                "steps": 25876,
-                "file_path": "results\\popcorn\\Enemy Behavior\\Enemy Behavior-25876.onnx",
-                "reward": -1996.9072164948454,
-                "creation_time": 1685483971.0826442,
+                "steps": 499965,
+                "file_path": "results\\popcorn\\Enemy Behavior\\Enemy Behavior-499965.onnx",
+                "reward": 4291.139852311876,
+                "creation_time": 1685490699.1028423,
                 "auxillary_file_paths": [
-                    "results\\popcorn\\Enemy Behavior\\Enemy Behavior-25876.pt"
+                    "results\\popcorn\\Enemy Behavior\\Enemy Behavior-499965.pt"
+                ]
+            },
+            {
+                "steps": 500029,
+                "file_path": "results\\popcorn\\Enemy Behavior\\Enemy Behavior-500029.onnx",
+                "reward": 4291.139852311876,
+                "creation_time": 1685490699.1907017,
+                "auxillary_file_paths": [
+                    "results\\popcorn\\Enemy Behavior\\Enemy Behavior-500029.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 25876,
+            "steps": 500029,
             "file_path": "results\\popcorn\\Enemy Behavior.onnx",
-            "reward": -1996.9072164948454,
-            "creation_time": 1685483971.0826442,
+            "reward": 4291.139852311876,
+            "creation_time": 1685490699.1907017,
             "auxillary_file_paths": [
-                "results\\popcorn\\Enemy Behavior\\Enemy Behavior-25876.pt"
+                "results\\popcorn\\Enemy Behavior\\Enemy Behavior-500029.pt"
             ]
         }
     },
